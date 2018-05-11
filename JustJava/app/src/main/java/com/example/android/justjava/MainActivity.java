@@ -38,31 +38,10 @@ public class MainActivity extends AppCompatActivity {
      */
     public void submitOrder(View view) {
         int finalPrice = calculatePrice(numberOfCoffees, priceOfCoffee);
+        String priceMessage = "Total: $" + finalPrice;
+        displayMessage(priceMessage);
     }
 
-    /**
-     * This method displays the given quantity value on the screen.
-     */
-    private void displayQuantity(int number2) {
-        TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
-        quantityTextView.setText("" + number2);
-    }
-
-    /**
-     * This method displays the given price on the screen.
-     */
-    private void displayPrice(int number) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
-    }
-
-    /**
-     * This method displays the given text on the screen.
-     */
-    private void displayMessage(String message) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(message);
-    }
     /**
      * This method calculates the price for the Coffes
      * @param price is the price of the coffees
@@ -72,4 +51,20 @@ public class MainActivity extends AppCompatActivity {
         int finalPrice= price*quantity;
         return finalPrice;
     }
+    /**
+     * This method displays the given quantity value on the screen.
+     */
+    private void displayQuantity(int number2) {
+        TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
+        quantityTextView.setText("" + number2);
+    }
+
+    /**
+     * This method displays the given text on the screen.
+     */
+    private void displayMessage(String message) {
+        TextView priceTextView = (TextView) findViewById(R.id.orderSummary_text_view);
+        priceTextView.setText(message);
+    }
+
 }
