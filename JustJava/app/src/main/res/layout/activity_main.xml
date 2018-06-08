@@ -13,11 +13,9 @@
         tools:context=".MainActivity">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="Type your name"
             android:layout_margin="16dp"
-            android:textAllCaps="true"/>
+            style="@style/HeaderTextStyle"/>
 
         <EditText
             android:id="@+id/name_input"
@@ -27,11 +25,9 @@
 
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="Toppings"
             android:layout_margin="16dp"
-            android:textAllCaps="true"/>
+            style="@style/HeaderTextStyle"/>
 
         <CheckBox
             android:id="@+id/whipped_cream_checkbox"
@@ -51,10 +47,9 @@
 
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="QUANTITY"
-            android:layout_margin="16dp"/>
+            android:layout_margin="16dp"
+            style="@style/HeaderTextStyle"/>
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
